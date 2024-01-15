@@ -68,7 +68,7 @@ def answer(call: CallbackQuery):
         bot.set_state(call.from_user.id,Mystate.notification,call.message.chat.id)
 
     elif call.data == "photochka":
-        with open('photo.jpg', 'rb') as file:
+        with open('stuff.png', 'rb') as file:
             photo = file.read()
         bot.send_photo(chat_id=call.message.chat.id,
                        photo=photo, reply_markup=back())
